@@ -15,7 +15,8 @@ github.com/mattn/go-isatty v0.0.4/go.mod h1:M+lRXTBqGeGNdLjl/ufCoiOlB5xdOkqRJdNx
 github.com/pkg/errors v0.8.1 h1:iURUrRGxPUNPdy5/HRSm+Yj6okJ6UtLINN0Q9M4+h3I=
 github.com/pkg/errors v0.8.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
-github.com/po3rin/godocbot v0.0.0-20190222190654-aae01fd10b60 h1:cSj9gGLJbe5iI1ysxPdYsXBkNR4z01Vph2usyvZ5GPs=
+github.com/po3rin/goastbot v0.0.0-20190223154450-57fa9fcc37c6 h1:Mqj8HtF4kAAf0lxNJ1ESKqVJxfUNhghN5UYW/hf6A14=
+github.com/po3rin/goastbot v0.0.0-20190223154450-57fa9fcc37c6/go.mod h1:w6Jc9Hf3fjpmdw7UhVSjicHKt/1s9vsntZDNKWgNRp4=
 github.com/po3rin/godocbot v0.0.0-20190222190654-aae01fd10b60/go.mod h1:2azhML5fbE3Lo4tGRLTS1a630ogPdMtVannbrvQrVwo=
 github.com/sirupsen/logrus v1.3.0 h1:hI/7Q+DtNZ2kINb6qt/lS+IyXnHQe9e90POfeewL/ME=
 github.com/sirupsen/logrus v1.3.0/go.mod h1:LxeOpSwHxABJmUn/MG1IvRgCAasNZTLOkJPxbbu5VWo=

@@ -8,7 +8,7 @@ import (
 
 	"github.com/line/line-bot-sdk-go/linebot"
 	"github.com/pkg/errors"
-	"github.com/po3rin/goastbot/logger"
+	"github.com/po3rin/godocbot/logger"
 )
 
 var msg = `aaaaaaa

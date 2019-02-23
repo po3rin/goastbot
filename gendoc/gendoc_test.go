@@ -7,13 +7,18 @@ import (
 	"github.com/po3rin/godocbot/gendoc"
 )
 
+var template = `package main
+func main() {
+	%v
+}`
+
 func TestGenDoc(t *testing.T) {
 	tests := []struct {
 		code string
 		want gendoc.Doc
 	}{
 		{
-			code: "fmt.Println",
+			code: "fmt.Println(3)",
 			want: gendoc.Doc{
 				Definition: "Println func(a ...interface{}) (n int, err error)",
 				Doc:        "Println formats using the default formats for its operands and writes to standard output. Spaces are always added between operands and a newline is appended. It returns the number of bytes written and any write error encountered.",
