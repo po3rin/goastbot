@@ -17,7 +17,6 @@ github.com/pkg/errors v0.8.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINE
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/po3rin/goastbot v0.0.0-20190223154450-57fa9fcc37c6 h1:Mqj8HtF4kAAf0lxNJ1ESKqVJxfUNhghN5UYW/hf6A14=
 github.com/po3rin/goastbot v0.0.0-20190223154450-57fa9fcc37c6/go.mod h1:w6Jc9Hf3fjpmdw7UhVSjicHKt/1s9vsntZDNKWgNRp4=
-github.com/po3rin/godocbot v0.0.0-20190222190654-aae01fd10b60/go.mod h1:2azhML5fbE3Lo4tGRLTS1a630ogPdMtVannbrvQrVwo=
 github.com/sirupsen/logrus v1.3.0 h1:hI/7Q+DtNZ2kINb6qt/lS+IyXnHQe9e90POfeewL/ME=
 github.com/sirupsen/logrus v1.3.0/go.mod h1:LxeOpSwHxABJmUn/MG1IvRgCAasNZTLOkJPxbbu5VWo=
 github.com/stretchr/objx v0.1.1/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=

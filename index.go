@@ -8,6 +8,7 @@ import (
 
 	"github.com/line/line-bot-sdk-go/linebot"
 	"github.com/pkg/errors"
+	"github.com/po3rin/godocbot/gendoc"
 	"github.com/po3rin/godocbot/logger"
 )
 
@@ -57,8 +58,17 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 			case *linebot.TextMessage:
 				source := event.Source
 				if source.Type == linebot.EventSourceTypeUser {
-					fmt.Println(message)
-					postMessage := linebot.NewTextMessage(msg)
+					doc, err := gendoc.GenDoc(message.Text)
+					if err != nil {
+						postMessage := linebot.NewTextMessage("not found ...")
+						if _, err = bot.ReplyMessage(event.ReplyToken, postMessage).Do(); err != nil {
+							err = errors.Wrapf(err, "Failed to reply message: %+v", r)
+							logger.Error(err)
+							w.WriteHeader(500)
+							fmt.Fprintf(w, "Done: %v", err)
+						}
+					}
+					postMessage := linebot.NewTextMessage(doc)
 					if _, err = bot.ReplyMessage(event.ReplyToken, postMessage).Do(); err != nil {
 						err = errors.Wrapf(err, "Failed to reply message: %+v", r)
 						logger.Error(err)
