@@ -1,0 +1,8 @@
+{
+    "version": 2,
+    "name": "go",
+    "builds": [
+        { "src": "*.go", "use": "@now/go" }
+    ],
+    "alias": "go-po3rin.now.sh"
+}
