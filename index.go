@@ -60,13 +60,18 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 				if source.Type == linebot.EventSourceTypeUser {
 					doc, err := gendoc.GenDoc(message.Text)
 					if err != nil {
+						logger.Error(err)
 						postMessage := linebot.NewTextMessage("not found ...")
 						if _, err = bot.ReplyMessage(event.ReplyToken, postMessage).Do(); err != nil {
 							err = errors.Wrapf(err, "Failed to reply message: %+v", r)
 							logger.Error(err)
 							w.WriteHeader(500)
 							fmt.Fprintf(w, "Done: %v", err)
+							return
 						}
+						w.WriteHeader(404)
+						fmt.Fprintf(w, "Done: %v", err)
+						return
 					}
 					postMessage := linebot.NewTextMessage(doc)
 					if _, err = bot.ReplyMessage(event.ReplyToken, postMessage).Do(); err != nil {
@@ -74,6 +79,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 						logger.Error(err)
 						w.WriteHeader(500)
 						fmt.Fprintf(w, "Done: %v", err)
+						return
 					}
 				} else {
 					logger.Warnf("Warn to recieve unsupported source type: %+v\n", source.Type)
