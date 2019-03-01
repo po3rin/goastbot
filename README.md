@@ -1,3 +1,3 @@
-# Go AST Bot
+# Go Doc Bot
 
 in development ...
